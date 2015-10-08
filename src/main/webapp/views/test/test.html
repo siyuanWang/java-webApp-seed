@@ -1,0 +1,40 @@
+<div>
+    <div>
+        <a href="#user/add" class="btn btn-success">add</a>
+    </div>
+    <hr/>
+    <table datatable="ng"  class="table table-hover" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>username</th>
+                <th>email</th>
+                <th>age</th>
+                <th>sex</th>
+                <th>phone</th>
+                <th>operation</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="user in users">
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.sex}}</td>
+            <td>{{user.phone}}</td>
+            <td>
+                <a href="#user/update/{{user._id}}"
+                   tooltip="�޸�"
+                   tooltip-placement="top"
+                   tooltip-trigger="mouseenter">
+                    <i class="fa fa-pencil"></i>
+                </a>&nbsp;
+                <a href="javascript:void(0)" ng-click="del(user._id)"
+                   tooltip="ɾ��"
+                   tooltip-placement="top"
+                   tooltip-trigger="mouseenter">
+                    <i class="fa fa-trash" title="ɾ��"></i>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+</div>
