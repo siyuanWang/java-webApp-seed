@@ -3,11 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-
                            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
-    <bean id="configBean"
-          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <bean id="configBean" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location">
             <value>classpath:jdbc.properties</value>
         </property>
@@ -41,7 +39,40 @@
         <property name="slowSqlMillis" value="10000" />
         <property name="logSlowSql" value="true" />
     </bean>
+    
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan">
+            <list>
+                <value>com.ericsson.dao.entity</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</prop>
+                <prop key="hibernate.hbm2ddl.auto">none</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.use_sql_comments">false</prop>
+                <prop key="hibernate.max_fetch_depth">2</prop>
+                <prop key="hibernate.jdbc.batch_size">100</prop>
+            	<prop key="hibernate.order_inserts">true</prop>
+                <prop key="hibernate.query.substitutions">true 1, false 0</prop>
+                <prop key="hibernate.connection.SetBigStringTryClob">true</prop>
+                <prop key="javax.persistence.validation.mode">none</prop>
+                <prop key="hibernate.current_session_context_class">
+                    org.springframework.orm.hibernate4.SpringSessionContext
+                </prop>
+            </props>
+        </property>
+    </bean>
 
+    <!-- 配置Hibernate事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"/>
     </bean>
@@ -49,15 +80,11 @@
     <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
         <property name="messageConverters">
             <list>
-                <bean id="stringHttpMessageConverter"
-                      class="org.springframework.http.converter.StringHttpMessageConverter"/>
-                <bean id="formHttpMessageConverter"
-                      class="org.springframework.http.converter.FormHttpMessageConverter"/>
-                <bean
-                        class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
+                <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter"/>
+                <bean id="formHttpMessageConverter" class="org.springframework.http.converter.FormHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
                 <bean class="org.springframework.http.converter.FormHttpMessageConverter"/>
-                <bean
-                        class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
             </list>
         </property>
     </bean>
