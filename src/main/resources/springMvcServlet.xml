@@ -22,8 +22,8 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
     
 	<!-- 激活@Controller模式 -->
 	<mvc:annotation-driven />
-	<mvc:view-controller path="/" view-name="redirect:/index/index" />
-	<!-- <mvc:resources mapping="/style/**" location="/style/" /> -->
+	<!--<mvc:view-controller path="/" view-name="redirect:/index/index" /> -->
+	<mvc:resources mapping="/**" location="/" />
 	
 	<bean id="springContextUtil" class="com.ericsson.util.SpringContextUtil" />
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
