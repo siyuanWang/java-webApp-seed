@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.ericsson.dao.BaseDao;
 import com.ericsson.dao.entity.SysUser;
-import com.ericsson.dao.entity.Test;
 import com.ericsson.dao.user.UserDao;
 @Repository("userDao")
 public class UserDaoImpl extends BaseDao implements UserDao{
@@ -27,14 +26,6 @@ public class UserDaoImpl extends BaseDao implements UserDao{
 	public List<SysUser> query() {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public int saveTest(Test test) {
-		saveObj(test);
-		int id = test.getId();
-		LOGGER.debug("saved user id : {}", id);
-		return id;
 	}
 
 }
