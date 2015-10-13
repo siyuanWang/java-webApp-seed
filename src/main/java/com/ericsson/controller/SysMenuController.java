@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.ericsson.dao.entity.SysMenu;
+import com.ericsson.controller.pojo.SysMenuPojo;
 import com.ericsson.service.SysMenuService;
 import com.ericsson.service.SysUserService;
 
@@ -29,7 +29,7 @@ public class SysMenuController {
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(new MediaType("text", "plain", Charset.forName("utf-8")));
 		
-		List<SysMenu> menus = menuService.query();
+		List<SysMenuPojo> menus = menuService.queryBootstrapTreeviewPojos();
 		final SerializerFeature[] serializerFeatures = { SerializerFeature.WriteNullStringAsEmpty,
 				SerializerFeature.WriteNullListAsEmpty, SerializerFeature.WriteMapNullValue};
 		String returnJson = JSON.toJSONStringWithDateFormat(menus, "yyyy-MM-dd HH:mm:ss", serializerFeatures);

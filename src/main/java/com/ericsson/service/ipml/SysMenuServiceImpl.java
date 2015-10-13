@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.ericsson.controller.pojo.SysMenuPojo;
 import com.ericsson.dao.entity.SysMenu;
 import com.ericsson.dao.SysMenuDao;
 import com.ericsson.service.SysMenuService;
@@ -74,5 +76,24 @@ public class SysMenuServiceImpl implements SysMenuService {
 		
 		List<SysMenu> beanList = sysMenuDao.query();
 		return beanList;
+	}
+
+	@Override
+	public List<SysMenuPojo> queryBootstrapTreeviewPojos() {
+		return _queryBootstrapTreeviewPojos(query());
+	}
+	
+	private List<SysMenuPojo> _queryBootstrapTreeviewPojos(List<SysMenu> menus) {
+		List<SysMenuPojo> pojos = new ArrayList<SysMenuPojo>();
+		for(SysMenu menu: menus) {
+			SysMenuPojo pojo = new SysMenuPojo();
+			pojo.setText(menu.getName());
+			pojo.setHref(menu.getUrl());
+			List<SysMenu> children = menu.getChildList();
+			if(children != null && children.size() > 0)
+				pojo.setNodes(_queryBootstrapTreeviewPojos(children));
+			pojos.add(pojo);
+		}
+		return pojos;
 	}
 }

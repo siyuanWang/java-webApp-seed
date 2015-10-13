@@ -1,6 +1,7 @@
 package com.ericsson.controller.pojo;
 
 import java.io.Serializable;
+import java.util.List;
 /**
  * 
  * 对应前端的bootstrap-treeview的数据结构
@@ -19,7 +20,7 @@ public class SysMenuPojo implements Serializable{
 	private String selectable;
 	private BootstrapTreeviewNodeState state;
 	private String[] tags;
-	private SysMenuPojo[] nodes;
+	private List<SysMenuPojo> nodes;
 	
 	public String getText() {
 		return text;
@@ -75,10 +76,10 @@ public class SysMenuPojo implements Serializable{
 	public void setTags(String[] tags) {
 		this.tags = tags;
 	}
-	public SysMenuPojo[] getNodes() {
+	public List<SysMenuPojo> getNodes() {
 		return nodes;
 	}
-	public void setNodes(SysMenuPojo[] nodes) {
+	public void setNodes(List<SysMenuPojo> nodes) {
 		this.nodes = nodes;
 	}
 }
