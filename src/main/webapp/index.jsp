@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Geely CSP Admin</title>
+    <title>TMP Geely CSP Admin</title>
     <meta name="description" content="Geely CSP Admin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -39,7 +39,21 @@
             height: 100%;
         }
         .white-color-a {
+            position: relative;
             color: white;
+        }
+        .badge {
+            position: absolute;
+            top: 6px;
+            left: 4px;
+            padding: 2px;
+            cursor: pointer;
+            background-color: transparent!important;
+            color: #ffffff;
+            border: 1px solid #fff;
+            width: 18px;
+            height: 18px;
+            box-shadow: 1px 1px 0 #2dc3e8;
         }
         .sidebar-toggler {
             vertical-align: middle;
@@ -62,6 +76,8 @@
             margin-bottom: -1px;
             background-color: #fff;
             border-right:0;
+            border-left: 0;
+            border-top: 1px solid #f3f3f3;
         }
     </style>
 </head>
@@ -75,15 +91,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" style="color:white;font-weight:bold;">Geely GSP</a>
+            <a class="navbar-brand" href="#" style="color:white;font-weight:bold;">Geely CSP</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <span style="color:#ffffff;font-size:18px;line-height:53px;">Administrator</span>
+                </li>
+                <li>
+                    <a href="#" class="white-color-a">
+                        <i class="fa fa-envelope" style="font-size:23px;"></i>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle white-color-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle white-color-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user" style="font-size:23px;"></i><span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu">
                         <li><a href="#" class='white-color-a'>账户设置</a></li>
                         <li role="separator" class="divider"></li>
@@ -96,7 +123,7 @@
 </nav>
 <div class="main-container container-fluid">
 	<div class="row">
-		<div class="col-md-2" style="padding: 0;box-shadow: 3px 0 7px rgba(0,0,0,.15);z-index:1;min-height:100%;">
+		<div class="col-md-2" style="padding: 5px;box-shadow: 3px 0 7px rgba(0,0,0,.15);z-index:1;min-height:100%;">
 			<ul menu-directive class="nav"></ul>
 		</div>
   		<div class="col-md-10" style="background-color: #f3f3f3;">

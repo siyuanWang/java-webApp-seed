@@ -12,7 +12,7 @@ public class SysMenuPojo implements Serializable{
 	private static final long serialVersionUID = -3393229039591335016L;
 	
 	private String text;
-	private String icon;
+	private String icon = "fa fa-paper-plane";
 	private String selectedIcon;
 	private String color;
 	private String backColor;
