@@ -1,0 +1,6 @@
+insert into SYS_MENU ("ID", "PID", "NAME", "URL", "ORDER_NUM", "TYPE", "UPDATE_TIME", "CREATE_TIME") values(1,0,'系统管理','javascript:void(0)','1','1','2015-05-25 14:08:03','2015-05-25 14:08:03');
+insert into SYS_MENU ("ID", "PID", "NAME", "URL", "ORDER_NUM", "TYPE", "UPDATE_TIME", "CREATE_TIME") values(2,0,'车辆管理','javascript:void(0)','1','1','2015-05-25 14:08:03','2015-05-25 14:08:03');
+insert into SYS_MENU ("ID", "PID", "NAME", "URL", "ORDER_NUM", "TYPE", "UPDATE_TIME", "CREATE_TIME") values(3,0,'系统参数','javascript:void(0)','1','1','2015-05-25 14:08:03','2015-05-25 14:08:03');
+insert into SYS_MENU ("ID", "PID", "NAME", "URL", "ORDER_NUM", "TYPE", "UPDATE_TIME", "CREATE_TIME") values(11,1,'用户管理','javascript:void(0)','1','1','2015-05-25 14:08:03','2015-05-25 14:08:03');
+insert into SYS_MENU ("ID", "PID", "NAME", "URL", "ORDER_NUM", "TYPE", "UPDATE_TIME", "CREATE_TIME") values(12,1,'角色管理','javascript:void(0)','1','1','2015-05-25 14:08:03','2015-05-25 14:08:03');
+insert into SYS_MENU ("ID", "PID", "NAME", "URL", "ORDER_NUM", "TYPE", "UPDATE_TIME", "CREATE_TIME") values(13,1,'机构管理','javascript:void(0)','1','1','2015-05-25 14:08:03','2015-05-25 14:08:03');

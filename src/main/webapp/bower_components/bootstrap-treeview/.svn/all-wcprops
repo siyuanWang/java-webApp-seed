@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview
+END
+package.json
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview/package.json
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview/LICENSE
+END
+CHANGELOG.md
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview/CHANGELOG.md
+END
+app.js
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview/app.js
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview/README.md
+END
+Gruntfile.js
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview/Gruntfile.js
+END
+.bower.json
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview/.bower.json
+END
+bower.json
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/bootstrap-treeview/bower.json
+END

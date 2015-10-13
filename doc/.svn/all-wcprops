@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/doc
+END
+geely.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/doc/geely.sql
+END
+init-data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/doc/init-data.sql
+END
+create-table.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/doc/create-table.sql
+END

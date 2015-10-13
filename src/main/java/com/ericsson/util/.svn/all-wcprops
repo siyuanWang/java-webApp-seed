@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/util
+END
+PaginationRow.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/util/PaginationRow.java
+END
+CommonUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/util/CommonUtil.java
+END
+Pagination.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/util/Pagination.java
+END
+Operation.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/util/Operation.java
+END
+TestConnectionPostgreSql.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/util/TestConnectionPostgreSql.java
+END
+SpringContextUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/util/SpringContextUtil.java
+END

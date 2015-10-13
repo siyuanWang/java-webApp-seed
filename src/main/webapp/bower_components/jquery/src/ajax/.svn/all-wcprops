@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/jquery/src/ajax
+END
+load.js
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/jquery/src/ajax/load.js
+END
+parseXML.js
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/jquery/src/ajax/parseXML.js
+END
+xhr.js
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/jquery/src/ajax/xhr.js
+END
+parseJSON.js
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/jquery/src/ajax/parseJSON.js
+END
+script.js
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/jquery/src/ajax/script.js
+END
+jsonp.js
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/webapp/bower_components/jquery/src/ajax/jsonp.js
+END

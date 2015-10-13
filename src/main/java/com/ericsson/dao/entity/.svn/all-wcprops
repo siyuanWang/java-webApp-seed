@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/dao/entity
+END
+SysUserRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/dao/entity/SysUserRole.java
+END
+SysMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/dao/entity/SysMenu.java
+END
+SysUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/dao/entity/SysUser.java
+END
+SysRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/dao/entity/SysRole.java
+END
+SysRoleMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/java/com/ericsson/dao/entity/SysRoleMenu.java
+END

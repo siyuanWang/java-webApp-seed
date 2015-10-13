@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/resources
+END
+hibernate.reveng.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/resources/hibernate.reveng.xml
+END
+springMvcServlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/resources/springMvcServlet.xml
+END
+logback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/resources/logback.xml
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/resources/jdbc.properties
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/resources/applicationContext.xml
+END
+hibernate.properties
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/gz02/!svn/ver/160561/projects/ericsson/ipmcnh/Source/misc/web-seed/src/main/resources/hibernate.properties
+END
