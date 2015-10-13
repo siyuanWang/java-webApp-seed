@@ -30,8 +30,9 @@ public class SysMenuController {
         headers.setContentType(new MediaType("text", "plain", Charset.forName("utf-8")));
 		
 		List<SysMenuPojo> menus = menuService.queryBootstrapTreeviewPojos();
-		final SerializerFeature[] serializerFeatures = { SerializerFeature.WriteNullStringAsEmpty,
-				SerializerFeature.WriteNullListAsEmpty, SerializerFeature.WriteMapNullValue};
+//		final SerializerFeature[] serializerFeatures = { SerializerFeature.WriteNullStringAsEmpty,
+//				SerializerFeature.WriteNullListAsEmpty, SerializerFeature.WriteMapNullValue};
+		final SerializerFeature[] serializerFeatures = {};
 		String returnJson = JSON.toJSONStringWithDateFormat(menus, "yyyy-MM-dd HH:mm:ss", serializerFeatures);
 		System.out.println(returnJson);
 		

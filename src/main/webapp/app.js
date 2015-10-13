@@ -22,10 +22,25 @@ define(['angular','angular-route'], function(angular) {
                 var route = routeResolverProvider.route;
                 //app路由
                 $routeProvider
-                    .when('/test', route.resolve('testController','test','test','vm', false));
-                
+                    .when('/sysUser', route.resolve('sysUserController','list','sys-user','vm', false))
+                    .otherwise(route.resolve('sysUserController','list','sys-user','vm', false));
+
     	}
     ]);
+
+    app.controller("indexController" , ['$scope', '$http', '$location', 'indexService', function($scope, $http, $location, indexService) {
+        $scope.queryMenuData = function() {
+            indexService.queryMenus().then(function(data) {
+                $scope.menuData = data;
+                console.log(data);
+                //注册一个广播，directive端接收广播
+                $scope.$broadcast("menuDataPrepared");
+            }, function(error) {
+                alert(error);
+            });
+        };
+        $scope.queryMenuData();
+    }]);
 
     return app;
 });

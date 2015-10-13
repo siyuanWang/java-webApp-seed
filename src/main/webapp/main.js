@@ -10,9 +10,15 @@ requirejs.config({
         'app': 'app',
         'route-resolver': 'scripts/routeResolver',
         'bootstrap-treeview': 'bower_components/bootstrap-treeview/public/js/bootstrap-treeview',
+        'indexService': 'scripts/services/indexService',
+        'directive': 'scripts/directives/registerDirectives',
+        'datatables': 'bower_components/DataTables/media/js/jquery.dataTables.min',
         'library': 'bower_components'
     },
     shim:{
+        'jquery': {
+            exports:'jquery'
+        },
         'angular':{
             exports:'angular'
         },
@@ -25,7 +31,7 @@ requirejs.config({
             exports: 'bootstrap-js'
         },
         'bootstrap-treeview': {
-            deps:['jquery']
+            deps: ['jquery']
         }
     }
 });
@@ -37,50 +43,12 @@ require(
         'route-resolver',
         'jquery',
         'bootstrap-js',
-        'bootstrap-treeview'
+        'bootstrap-treeview',
+        'indexService',
+        'directive',
+        'datatables'
     ],
     function(angular, app) {
         angular.bootstrap(document, ['myApp']);
-        var tree = [
-                    {
-                      text: "Parent 1",
-                      nodes: [
-                        {
-                          text: "Child 1",
-                          nodes: [
-                            {
-                              text: "Grandchild 1"
-                            },
-                            {
-                              text: "Grandchild 2"
-                            }
-                          ]
-                        },
-                        {
-                          text: "Child 2"
-                        }
-                      ]
-                    },
-                    {
-                      text: "Parent 2"
-                    },
-                    {
-                      text: "Parent 3"
-                    },
-                    {
-                      text: "Parent 4"
-                    },
-                    {
-                      text: "Parent 5"
-                    }
-                  ];
-        $('#nav').treeview({
-        	data: tree,         // data is not optional
-        	levels: 5,
-        	injectStyle: true,
-            color: 'grey',
-            selectedColor: 'black',
-            selectedBackColor: '#f5f5f5'
-    	});
     }
 );

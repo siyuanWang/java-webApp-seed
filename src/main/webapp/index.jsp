@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -5,7 +7,9 @@
     <meta name="description" content="Geely CSP Admin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="<%=request.getContextPath() %>/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<%=request.getContextPath() %>/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="<%=request.getContextPath() %>/bower_components/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="<%=request.getContextPath() %>/bower_components/DataTables/media/css/jquery.dataTables.css" type="text/css" rel="stylesheet"/>
     <style type="text/css">
     	html,body {
     		margin: 0px;
@@ -20,10 +24,49 @@
 	    .list-group-item:last-child {
     		border-radius: 0px;
     	}
+        .position-relative {
+            position: relative;
+            padding: 0 0 0 10px;
+            margin:0;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .header-buttons {
+            display: inline-block;
+            position: absolute;
+            right:0;
+            top:0;
+            height: 100%;
+        }
+        .white-color-a {
+            color: white;
+        }
+        .sidebar-toggler {
+            vertical-align: middle;
+            display: inline-block;
+            z-index: 1029;
+            margin-right: 5px;
+            padding: 8px 10px;
+            color: #dfdfdf;
+            -webkit-transition: all .218s ease;
+            -moz-transition: all .218s ease;
+            -o-transition: all .218s ease;
+            transition: all .218s ease;
+            height:100%;
+            float: right;
+        }
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: -1px;
+            background-color: #fff;
+            border-right:0;
+        }
     </style>
 </head>
-<body>
-<nav class="navbar" style="margin:0px;padding:0px;border: 0px; border-radius: 0px;min-height: 45px;">
+<body ng-controller="indexController">
+<nav class="navbar" style="margin:0;padding:0;border: 0; border-radius: 0;min-height: 45px;background-color:#2dc3e8;">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -32,35 +75,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="#" style="color:white;font-weight:bold;">Geely GSP</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle white-color-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#" class='white-color-a'>账户设置</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#" class='white-color-a'>注销</a></li>
                     </ul>
                 </li>
             </ul>
@@ -69,15 +96,13 @@
 </nav>
 <div class="main-container container-fluid">
 	<div class="row">
-		<div class="col-md-2" style="padding: 0px;">
-			<ul id="nav" class="nav">
-                
-            </ul>
+		<div class="col-md-2" style="padding: 0;box-shadow: 3px 0 7px rgba(0,0,0,.15);z-index:1;min-height:100%;">
+			<ul menu-directive class="nav"></ul>
 		</div>
-  		<div class="col-md-10" style="background-color: #f3f3f3;min-height: 100%;">
-			<div class="row">
+  		<div class="col-md-10" style="background-color: #f3f3f3;">
+			<div class="row" style="box-shadow: 0 3px 7px 0 rgba(0,0,0,.15);z-index: 1;position: relative;height:41px;">
 				<div class="col-md-12">
-					<ol class="breadcrumb">
+					<ol class="breadcrumb" style="margin:0">
 					  <li><a href="#">Home</a></li>
 					  <li><a href="#">Library</a></li>
 					  <li class="active">Data</li>
@@ -85,15 +110,29 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
-					<!-- 
-					<a href="#/test">test</a>
-					<div ng-view>
-					
-					</div> -->
-                    <div class="page-header">
-                        <h1>Example page header <small>Subtext for header</small></h1>
+				<div class="page-header position-relative">
+                    <div class="header-title">
+                        <h1 style="padding: 0;margin: 0 4px;font-size: 17px;font-weight: lighter;color: #737373;line-height: 37px;display: inline-block;">
+                            Admin 首页
+                        </h1>
                     </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen" style="font-size: 17px;font-style: normal;font-weight: normal;line-height: 27px;"></i>
+                        </a>
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h" style="font-size: 17px;font-style: normal;font-weight: normal;line-height: 27px;"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+			</div>
+			<div class="row" style="background: #eee;padding: 18px 20px 24px;min-height: 90%;">
+				<div class="col-md-12">
+					<div ng-view>
+
+					</div>
 				</div>
 			</div>
   		</div>
