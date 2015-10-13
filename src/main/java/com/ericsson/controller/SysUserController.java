@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ericsson.dao.entity.SysUser;
-import com.ericsson.service.UserService;
+import com.ericsson.service.SysUserService;
 
 @Controller
 @RequestMapping(value = "/user")
-public class UserController {
+public class SysUserController {
 	@Autowired
-	UserService userService;
+	SysUserService userService;
 
 	@RequestMapping(value = "/save", method = RequestMethod.GET)
 	public String index(Model model, HttpServletRequest request) {

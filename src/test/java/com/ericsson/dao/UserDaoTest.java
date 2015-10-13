@@ -1,15 +1,15 @@
 package com.ericsson.dao;
 
 import java.util.Date;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.ericsson.dao.entity.SysUser;
-import com.ericsson.dao.user.UserDao;
+import com.ericsson.dao.SysUserDao;
+
 public class UserDaoTest extends BaseDaoTestCase{
 	@Autowired 
-	private UserDao userDao;
+	private SysUserDao userDao;
 	
 	@Test
 	public void testSave() {

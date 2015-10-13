@@ -1,4 +1,4 @@
-package com.ericsson.dao.user.impl;
+package com.ericsson.dao.impl;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import com.ericsson.dao.BaseDao;
 import com.ericsson.dao.entity.SysUser;
-import com.ericsson.dao.user.UserDao;
-@Repository("userDao")
-public class UserDaoImpl extends BaseDao implements UserDao{
-	private Logger LOGGER = LoggerFactory.getLogger(UserDaoImpl.class);
+import com.ericsson.dao.SysUserDao;
+@Repository("sysUserDao")
+public class SysUserDaoImpl extends BaseDao implements SysUserDao{
+	private Logger LOGGER = LoggerFactory.getLogger(SysUserDaoImpl.class);
 	
 	
 	@Override
